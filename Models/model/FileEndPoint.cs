@@ -7,18 +7,36 @@ namespace Models.model
     //Husk klasser skal være public, ellers kan man ikke refferere til den
     public class FileEndPoint
     {
-        #region instance fields
+        #region Properties
 
         private string IpAddress { get; set; }
+        private int Port { get; set; }
 
         #endregion
 
-        #region properties
+        #region Constructors
 
-        
+        public FileEndPoint(string ipAddress, int port)
+        {
+            IpAddress = ipAddress;
+            Port = port;
+        }
+
+        public FileEndPoint()
+        {
+            
+        }
 
         #endregion
 
+        #region Methods
+
+        public override string ToString()
+        {
+            return $"{nameof(IpAddress)}: {IpAddress}, {nameof(Port)}: {Port}";
+        }
+
+        #endregion
 
 
     }
