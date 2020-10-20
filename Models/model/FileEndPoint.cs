@@ -9,8 +9,8 @@ namespace Models.model
     {
         #region Properties
 
-        private string IpAddress { get; set; }
-        private int Port { get; set; }
+        public string IpAddress { get; set; }
+        public int Port { get; set; }
 
         #endregion
 
